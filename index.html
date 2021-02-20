@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Energy Main</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sanitize.min.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/index.min.css">
+
+</head>
+<body>
+<header class="header header-index">
+    <div class="wrapper">
+        <nav class="nav header-nav header-nav__noJS">
+            <a href="" class="logo header-logo">
+                <picture>
+                    <source srcset="img/logo-mobile.svg" media="(max-width: 767px)">
+                    <source srcset="img/logo-tablet.svg" media="(max-width: 1299px)">
+                    <img src="img/logo-desktop.svg" width="202"
+                         alt="Cat Energy Logo"
+                         class="logo-img">
+                </picture>
+            </a>
+            <button class="btn btn-nav btn-nav__open">
+                <span class="btn-nav__line"></span>
+            </button>
+            <ul class="nav-list">
+                <li class="nav-item nav-item__active">
+                    <a href="" class="link nav-link nav-link__active">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="link nav-link">Каталог продукции</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="link nav-link">Подбор программы</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <section class="main-item">
+        <div class="wrapper">
+            <div class="main-item__description">
+                <h2 class="title main-item__title">Функциональное питание для котов</h2>
+                <p class="text main-item__text">Занялся собой? Займись котом!</p>
+                <a class="btn btn-green" href="#">Подобрать программу</a>
+            </div>
+            <picture class="main-item__picture">
+                <source srcset="img/index-can-mobile.png" media="(max-width: 767px)">
+                <source srcset="img/index-can-tablet.png" media="(min-width: 768px) and (max-width: 1299px)">
+                <img
+                        src="img/index-can-desktop.png"
+                        alt="Cat Energy Food"
+                        class="main-item__img">
+            </picture>
+        </div>
+    </section>
+</header>
+<main>
+    <section class="main-section section-options">
+        <div class="wrapper">
+            <ul class="options-list">
+                <li class="options-item options-item__slim">
+                    <h2 class="title option-title">Похудение</h2>
+                    <p class="text option-text">
+                        Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat
+                        Energy Slim поможет вашему питомцу сбросить лишний вес.
+                    </p>
+                    <a href="#" class="link option-link">Каталог Slim</a>
+                </li>
+                <li class="options-item options-item__pro">
+                    <h2 class="title option-title">Набор массы</h2>
+                    <p class="text option-text">
+                        Заработать авторитет среди дворовых котов и даже собак?
+                        Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+                    </p>
+                    <a href="#" class="link option-link">Каталог PRO</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="main-section section-work">
+        <div class="wrapper">
+            <h2 class="title work-title">Как это работает</h2>
+            <ul class="work-list">
+                <li class="text work-item work-item__leaf" data-id="1">Функциональное питание содержит только полезные
+                    питательные
+                    вещества.
+                </li>
+                <li class="text work-item work-item__water" data-id="2">Выпускается в виде порошка, который нужно
+                    лишь залить
+                    кипятком и
+                    готово.
+                </li>
+                <li class="text work-item work-item__fork" data-id="3">Замените один-два приема обычной еды на наше
+                    функциональное
+                    питание.
+                </li>
+                <li class="text work-item work-item__time" data-id="4">Уже через месяц наслаждайтесь изменениями к
+                    лучшему вашего
+                    питомца!
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="main-section section-example">
+        <div class="wrapper">
+            <div class="description example-description">
+                <h2 class="title example-title">Живой пример</h2>
+                <p class="text description-text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
+                    Cat
+                    Energy
+                    Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
+                    по-прежнему спит по 16 часов в день.
+                </p>
+                <div class="description-measure">
+                    <span class="measure" data-content="снижение веса">5 кг</span>
+                    <span class="measure" data-content="затрачено  времени">60 дней</span>
+                    <p class="text text-mark">Затраты на питание:              15 000 руб.</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-wrapper">
+            <div class="slider">
+                <input type="radio" class="range-radio range-radio__before" aria-label="Show changes" name="toggle"
+                       checked>
+                <input type="radio" class="range-radio range-radio__after" aria-label="Show changes" name="toggle">
+                <div class="image-wrapper image-wrapper__after">
+                    <picture>
+                        <source srcset="img/after-mobile.png" media="(max-width: 767px)">
+                        <img class="slider-image slider-image__after"
+                             src="img/after-desktop.png"
+                             alt="Cat's photo after right nourishment">
+
+                    </picture>
+                </div>
+                <div class="image-wrapper image-wrapper__before">
+                    <picture>
+                        <source srcset="img/before-mobile.png" media="(max-width: 767px)">
+                        <img class="slider-image slider-image__before"
+                             src="img/before-desktop.png"
+                             alt="Cat's photo after right nourishment">
+                    </picture>
+                </div>
+                <div class="range">
+                    <span class="range-title range-title__before">Было</span>
+                    <div class="range-line">
+                        <div class="range-line__inner"></div>
+                        <div class="range-control" tabindex="0"></div>
+                    </div>
+                    <span class="range-title range-title__after">Стало</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-section section-contacts">
+        <div class="wrapper">
+            <p class="text text-mark">приглашаем к сотрудничеству дилеров!</p>
+            <address class="text text-address">
+                ул. Большая<br> Конюшенная, д. 19/8 <span class="city">Санкт-Петербург</span>
+            </address>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.2995112854567!2d30.32198627611251!3d59.93879553903237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya%20Konyushennaya%20St%2C%2019%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sua!4v1613768671243!5m2!1sen!2sua" style="border:0;" allowfullscreen="" loading="lazy" class="map-frame"></iframe>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="wrapper">
+        <a class="link logo footer-logo" href="">
+            <img class="img-logo" src="img/logo-footer.svg" alt="Logo Cat Energy" width="128" height="24">
+        </a>
+        <ul class="media-list">
+            <li class="media-item media-item__vk">
+                <a class="media-link media-link" href="#">
+                    <svg width="22" height="12">
+                        <use xlink:href="img/sprite.svg#vk-ico"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="media-item media-item__insta">
+                <a class="media-link" href="#">
+                    <svg width="16" height="16">
+                        <use xlink:href="img/sprite.svg#insta-ico"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="media-item media-item__fb">
+                <a class="media-link" href="#">
+                    <svg width="10" height="19">
+                        <use xlink:href="img/sprite.svg#fb-ico"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+<script src="js/nav.min.js"></script>
+<script src="js/slider.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+@import "../_mixins";
+@import "../_variables";
+
+.footer {
+  width: 100%;
+  background-color: #f2f2f2;
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.footer-logo {
+  .reset();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s linear;
+
+  &:hover, &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.media-list, .media-item, .media-link {
+  .reset();
+}
+
+.media-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.media-item {
+  list-style: none;
+}
+
+.media-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+
+  svg {
+    fill: @mainFontColor;
+    transition: 0.3s linear;
+  }
+
+  &:hover, &:focus {
+    outline: none;
+
+    svg {
+      fill: @greenBackColor;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: @greenBackColor;
+      opacity: 0.3;
+    }
+  }
+}
+
+@media screen and (max-width: 767px){
+  .footer {
+    padding-top: 17px;
+
+    .wrapper {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .footer-logo {
+    width: 100%;
+    padding: 25px 0 31px;
+    border-bottom: 1px solid @grayBorderColor;
+  }
+
+  .media-list {
+    width: 136px;
+    padding: 22px 0 20px;
+  }
+
+  .media-item {
+    &__vk {
+      margin-right: 38px;
+    }
+
+    &__insta {
+      margin-right: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 61px 0;
+
+    .wrapper {
+      justify-content: flex-start;
+    }
+  }
+
+  .footer-logo {
+    margin-right: 156px;
+  }
+
+  .media-list{
+    width: 126px;
+    justify-content: space-between;
+  }
+
+  .media-item {
+    &__vk svg {
+      width: 30px;
+      height: 16px;
+    }
+
+    &__insta svg {
+      width: 23px;
+      height: 23px;
+    }
+
+    &__fb svg {
+      width: 14px;
+      height: 28px;
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .footer-logo {
+    margin-right: 411px;
+  }
+}

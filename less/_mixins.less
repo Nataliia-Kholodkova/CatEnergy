@@ -1,0 +1,31 @@
+@import "_variables";
+
+.reset() {
+  margin: 0;
+  padding: 0;
+}
+
+.input() {
+  font: inherit;
+  background: none;
+  display: block;
+  box-sizing: border-box;
+}
+
+.setFont(@fontSize: inherit, @fontWeight: inherit, @lineHeight: inherit, @textTransform: none, @color: @mainFontColor) {
+  font-size: @fontSize;
+  font-weight: @fontWeight;
+  line-height: @lineHeight;
+  color: @color;
+  text-transform: @textTransform;
+}
+
+.setGreenButton() {
+  background-color: @greenBackColor;
+  color: white;
+  font-family: @titleFont;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
