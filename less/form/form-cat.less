@@ -1,0 +1,58 @@
+@import "../_mixins";
+@import "../_variables";
+
+.field-cat {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.field-cat__input {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .form-cat__wrapper {
+    margin-bottom: 10px;
+  }
+
+  .field-cat {
+    margin-bottom: 14px;
+  }
+
+  .field-cat__label {
+    margin-right: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form-cat__wrapper {
+    margin-bottom: 52px;
+  }
+
+  .field-cat {
+    padding-left: 41px;
+    padding-right: 37px;
+    margin-bottom: 21px;
+  }
+
+  .field-cat__label {
+    margin-right: 16px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .form-cat__wrapper {
+    width: 570px;
+    margin: 0;
+    margin-bottom: 70px;
+  }
+
+  .field-cat {
+    padding-left: 0;
+    padding-right: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

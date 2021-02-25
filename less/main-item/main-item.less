@@ -1,11 +1,9 @@
 @import "../_mixins";
 @import "../_variables";
 
-.main-item {
-  .wrapper {
+  .wrapper__main-item {
     position: relative;
   }
-}
 
 .main-item__description {
   display: flex;
@@ -14,17 +12,7 @@
   flex-wrap: wrap;
 }
 
-.main-item__title, .main-item__text {
-  font-family: @titleFont;
-  font-weight: 400;
-}
-
-.main-item__text {
-  text-transform: uppercase;
-}
-
 .main-item__title {
-  text-transform: none;
   text-align: center;
 }
 
@@ -36,11 +24,9 @@
 }
 
 @media screen and (max-width: 767px) {
-  .main-item {
-    .wrapper {
+    .wrapper__main-item {
       padding-bottom: 42px;
     }
-  }
 
   .main-item__description {
     padding: 28px 0;
@@ -54,7 +40,6 @@
   }
 
   .main-item__text {
-    font-size: 14px;
     line-height: 14px;
     color: white;
     text-align: center;
@@ -63,8 +48,6 @@
   .main-item__title {
     width: 100%;
     margin-bottom: 26px;
-    font-size: 36px;
-    line-height: 36px;
     color: white;
   }
 
@@ -102,11 +85,9 @@
 }
 
 @media screen and (min-width: 1300px) {
-  .main-item {
-    .wrapper {
+    .wrapper__main-item {
       display: flex;
     }
-  }
 
   .main-item__description {
     width: 64%;

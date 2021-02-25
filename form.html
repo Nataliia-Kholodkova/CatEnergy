@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Cat Energy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sanitize.min.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/form.min.css">
+    <script src="js/nav.min.js" defer></script>
+</head>
+<body>
+<header class="header header-index header__noJS">
+    <div class="wrapper">
+        <nav class="nav header-nav header-nav__noJS">
+            <a href="index.html" class="logo header-logo">
+                <picture>
+                    <source srcset="img/logo-mobile.svg" media="(max-width: 767px)">
+                    <source srcset="img/logo-tablet.svg" media="(max-width: 1299px)">
+                    <img src="img/logo-desktop.svg" width="202"
+                         alt="Cat Energy Logo"
+                         class="logo-img">
+                </picture>
+            </a>
+            <button class="btn btn-nav btn-nav__open">
+                <span class="btn-nav__line"></span>
+            </button>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="link nav-link nav-link__white">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="catalog.html" class="link nav-link nav-link__white">Каталог продукции</a>
+                </li>
+                <li class="nav-item nav-item__active">
+                    <a href="" class="link nav-link nav-link__white nav-link__active">Подбор программы</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="form-section">
+        <form class="program-form" action="#" method="post">
+            <div class="wrapper form-wrapper form-intro__wrapper">
+                <h2 class="title title__medium form-title__main">Подбор программы</h2>
+                <p class="text form-text__main text-uppercase">Заполните анкету и мы подберем<br>
+                    программу питания для вашего кота</p>
+            </div>
+            <div class="form-div">
+                <div class="wrapper form-wrapper form-cat__wrapper">
+                    <label class="field program-form__field field-cat">
+                        <span class="label field-cat__label label-text text-uppercase">Имя:*</span>
+                        <input type="text" name="catName" placeholder="Барсик" class="input field-cat__input input-text text-uppercase"
+                               required>
+                    </label>
+                    <label class="field program-form__field field-cat">
+                        <span class="label field-cat__label label-text text-uppercase">Вес (кг):*</span>
+                        <input type="text" name="catName" placeholder="7" class="input field-cat__input input-text text-uppercase"
+                               required>
+                    </label>
+                    <label class="field program-form__field field-cat">
+                        <span class="label field-cat__label label-text text-uppercase">Возраст (лет):</span>
+                        <input type="text" name="catName" placeholder="7" class="input field-cat__input input-text text-uppercase">
+                    </label>
+                </div>
+                <div class="wrapper form-wrapper form-purpose__wrapper">
+                    <label class="field program-form__field field-purpose">
+                        <input type="radio" name="purpose" value="slim"
+                               class="input field-purpose__input input-custom input-radio visually-hidden" checked>
+                        <span class="label field-purpose__label label-custom text-uppercase">Похудение</span>
+                        <span class="custom-input-block custom-input-block__radio"></span>
+                    </label>
+                    <label class="field program-form__field field-purpose">
+                        <input type="radio" name="purpose" value="pro"
+                               class="input field-purpose__input input-custom input-radio visually-hidden">
+                        <span class="label field-purpose__label label-custom text-uppercase">Набор массы</span>
+                        <span class="custom-input-block custom-input-block__radio"></span>
+                    </label>
+                    <label class="field program-form__field field-purpose">
+                        <input type="radio" name="purpose" value="advise"
+                               class="input field-purpose__input input-custom input-radio visually-hidden">
+                        <span class="label field-purpose__label label-custom text-uppercase">Не знаю (Нужен ваш совет)</span>
+                        <span class="custom-input-block custom-input-block__radio"></span>
+                    </label>
+                </div>
+            </div>
+            <h2 class="title title__small form-title form-title__owner title-line">Контактные данные <br>(владельца
+                кота)</h2>
+            <div class="wrapper form-wrapper form-owner__wrapper">
+                <label class="field program-form__field field-owner field-owner__email">
+                    <span class="label field-owner__label label-text text-uppercase">E-mail:*</span>
+                        <input type="email" name="email" placeholder="kuklachev@gmail.com"
+                               class="input field-owner__input input-text input text-uppercase" required>
+                        <svg width="17" height="13">
+                            <use xlink:href="img/sprite.svg#mail-ico"></use>
+                        </svg>
+
+                </label>
+                <label class="field program-form__field field-owner field-owner__phone">
+                    <span class="label field-owner__label label-text text-uppercase">Телефон:*</span>
+                    <input type="tel" name="phone" placeholder="8 (960) 900-60-90"
+                           class="input field-owner__input input-text text-uppercase" required>
+                    <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#phone-ico"></use>
+                    </svg>
+                </label>
+            </div>
+            <h2 class="title title__small form-title form-title__comment title-line">Комментарий</h2>
+            <div class="wrapper form-wrapper form-comment__wrapper">
+                <label class="field program-form__field field-comment">
+                    <textarea name="comment" placeholder="Расскажите обо всех повадках кота"
+                              class="input field-comment__input input-text text-uppercase textarea"></textarea>
+                    <span class="label field-comment__label label-text visually-hidden">Комментарий</span>
+                </label>
+            </div>
+            <h2 class="title title__small form-title form-title__add title-line">Дополнительно</h2>
+            <div class="wrapper form-wrapper form-add__wrapper">
+                <label class="field program-form__field field-add">
+                    <input type="checkbox" name="sugarFree" value="1"
+                           class="input field-add__input input-custom input-check visually-hidden" checked>
+                    <span class="label field-add__label label-custom text-uppercase">Сахарозаменитель</span>
+                    <span class="custom-input-block custom-input-block__check">
+                        <svg width="21" height="16">
+                            <use xlink:href="img/sprite.svg#tick-ico"></use>
+                        </svg>
+                    </span>
+                </label>
+                <label class="field program-form__field field-add">
+                    <input type="checkbox" name="water" value="1"
+                           class="input field-add__input input-custom input-check visually-hidden">
+                    <span class="label field-add__label label-custom text-uppercase">Питьевая вода</span>
+                    <span class="custom-input-block custom-input-block__check">
+                        <svg width="21" height="16">
+                            <use xlink:href="img/sprite.svg#tick-ico"></use>
+                        </svg>
+                    </span>
+                </label>
+                <label class="field program-form__field field-add">
+                    <input type="checkbox" name="milk" value="1"
+                           class="input field-add__input input-custom input-check visually-hidden">
+                    <span class="label field-add__label label-custom text-uppercase ">Молоко</span>
+                    <span class="custom-input-block custom-input-block__check">
+                        <svg width="21" height="16">
+                            <use xlink:href="img/sprite.svg#tick-ico"></use>
+                        </svg>
+                    </span>
+                </label>
+                <label class="field program-form__field field-add">
+                    <input type="checkbox" name="vitamins" value="1"
+                           class="input field-add__input input-custom input-check visually-hidden">
+                    <span class="label field-add__label label-custom text-uppercase">Витамины</span>
+                    <span class="custom-input-block custom-input-block__check">
+                        <svg width="21" height="16">
+                            <use xlink:href="img/sprite.svg#tick-ico"></use>
+                        </svg>
+                    </span>
+                </label>
+            </div>
+            <div class="wrapper form-wrapper form-submit__wrapper">
+                <button type="submit" class="btn btn-green btn-submit">Отправить заявку</button>
+                <p class="text form-small-text">* — Обязательные поля</p>
+            </div>
+        </form>
+    </section>
+    <section class="main-section section-contacts">
+        <div class="contacts contacts-gray">
+            <div class="wrapper contacts-wrapper">
+                <p class="text text-uppercase text-uppercase__medium text-mark">приглашаем <br>к сотрудничеству<br>
+                    дилеров!
+                </p>
+                <address class="text text-address">
+                    ул. Большая<br> Конюшенная, д. 19/8 <br><span class="city">Санкт-Петербург</span>
+                </address>
+            </div>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.2995112854567!2d30.32198627611251!3d59.93879553903237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya%20Konyushennaya%20St%2C%2019%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sua!4v1613768671243!5m2!1sen!2sua"
+                    style="border:0;" allowfullscreen="" loading="lazy" class="map-frame"></iframe>
+        </div>
+    </section>
+</main>
+<footer class="footer footer-catalog">
+    <div class="wrapper">
+        <a class="link logo footer-logo" href="">
+            <img class="img-logo" src="img/logo-footer.svg" alt="Logo Cat Energy" width="128" height="24">
+        </a>
+        <ul class="media-list">
+            <li class="media-item media-item__vk">
+                <a class="media-link media-link" href="#">
+                    <svg width="22" height="12">
+                        <use xlink:href="img/sprite.svg#vk-ico"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="media-item media-item__insta">
+                <a class="media-link" href="#">
+                    <svg width="16" height="16">
+                        <use xlink:href="img/sprite.svg#insta-ico"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="media-item media-item__fb">
+                <a class="media-link" href="#">
+                    <svg width="10" height="19">
+                        <use xlink:href="img/sprite.svg#fb-ico"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>

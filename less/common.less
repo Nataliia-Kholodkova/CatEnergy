@@ -4,9 +4,12 @@
 body {
   width: 100%;
   font-family: Arial, sans-serif;
+  font-weight: 400;
   color: @mainFontColor;
   position: relative;
+}
 
+.body-index {
   &::before {
     position: absolute;
     display: block;
@@ -25,17 +28,54 @@ body {
 .title {
   .reset();
   font-family: @titleFont;
-  .setFont(@fontSize: 24px, @fontWeight: 400, @lineHeight: 37px, @textTransform: uppercase, @color: @titleColor);
+}
+
+.title__big, .title__medium, .title__small {
+  .setFontView(@fontWeight: 400);
+}
+
+.title-uppercase {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.title-line {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-bottom: 33px;
+
+  &::before, &::after {
+    content: '';
+    height: 3px;
+    background-color: @greenBackColor;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    width: 53px;
+    margin-left: 21px;
+  }
 }
 
 .text {
   .reset();
-  .setFont();
+}
+
+.text-uppercase {
+  font-family: @titleFont;
+  .setFontView(@textTransform: uppercase);
 }
 
 .btn {
   .reset();
   .input();
+  cursor: pointer;
 
   &:focus {
     outline-color: @greenBackColorHover;
@@ -57,6 +97,32 @@ body {
   }
 }
 
+.btn-gray {
+  .setGrayButton();
+  transition: 0.3s linear;
+  z-index: 1;
+
+  &:hover {
+    background-color: @grayBackColorHover;
+  }
+
+  &:active {
+    background-color: @grayBackColorHover;
+    color: rgba(@mainFontColor, 30%);
+  }
+}
+
+.btn-green, .btn-gray {
+  width: 100%;
+  padding: 10px 0;
+  .setFontSize(16px, 20px);
+}
+
+.btn-green__main {
+  .setFontSize(14px, 18px);
+  padding: 12px 0;
+}
+
 .link {
   .reset();
   display: block;
@@ -67,11 +133,17 @@ body {
   }
 }
 
-@media screen and (max-width: 767px){
+.text-mark {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
   body {
     font-size: 14px;
-    line-height: 28px;
+    line-height: 18px;
+  }
 
+  .body-index {
     &::before {
       width: 100%;
       height: 305px;
@@ -90,45 +162,104 @@ body {
     padding: 0 20px;
   }
 
-  .btn-green {
-    width: 100%;
-    padding: 12px 0;
-    font-size: 14px;
-    line-height: 18px;
+  .title__big {
+    .setFontSize(@fontSize: 36px, @lineHeight: 36px);
+    color: white;
+  }
+
+  .title__medium {
+    .setFontSize(@fontSize: 36px, @lineHeight: 60px);
+  }
+
+  .title__small {
+    .setFontSize(@fontSize: 24px, @lineHeight: 24px);
+  }
+
+  .title-uppercase {
+    .setFontSize(24px, 37px);
+  }
+
+  .text-uppercase__big {
+    .setFontSize(24px, 25px);
+  }
+
+  .text-uppercase__small {
+    .setFontSize(14px, 20px);
+  }
+
+  .text-uppercase__medium {
+    .setFontSize(16px, 20px);
   }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   body {
     font-size: 16px;
     line-height: 24px;
   }
 
   .wrapper {
-    padding: 0 30px;
+    width: 708px;
   }
 
-  .title {
+  .title__big {
+    .setFontSize(@fontSize: 60px, @lineHeight: 60px);
+  }
+
+  .title__medium {
+    .setFontSize(@fontSize: 60px, @lineHeight: 60px);
+  }
+
+  .title-uppercase {
+    .setFontSize(36px, 37px);
+  }
+
+  .title-line {
+    margin-bottom: 80px;
     font-size: 36px;
-    line-height: 37px;
+    line-height: 36px;
+
+    &::before {
+      display: block;
+      width: 28px;
+      margin-top: 12px;
+      margin-right: 38px;
+      flex-grow: 0;
+    }
+
+    &::after {
+      width: 59px;
+      margin-left: 38px;
+      margin-top: 12px;
+    }
   }
 
-  .btn-green {
+  .text-uppercase, .text-uppercase__small {
+    .setFontSize(20px, 20px);
+  }
+
+  .text-uppercase__big {
+    .setFontSize(30px, 37px);
+  }
+
+  .text-uppercase__medium {
+    .setFontSize(20px, 20px);
+  }
+
+  .btn-green__main {
     font-size: 20px;
-    line-height: 20px;
-    width: 246px;
     padding: 16px 0;
   }
 }
 
-@media screen and (min-width: 1300px){
+@media screen and (min-width: 1300px) {
   .wrapper {
     padding: 0 40px;
   }
 }
 
-@media screen and (min-width: 1300px){
-  body {
+@media screen and (min-width: 1300px) {
+  .body-index {
     &::before {
       width: 50%;
       min-height: 696px;
@@ -146,6 +277,12 @@ body {
   .wrapper {
     width: 1220px;
     padding: 0;
+  }
+
+  .title-line {
+    &::before {
+      width: 70px;
+    }
   }
 }
 

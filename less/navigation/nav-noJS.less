@@ -1,7 +1,15 @@
 @import "../_mixins";
 @import "../_variables";
 
-.header-nav__noJS {
+.header__noJS {
+  .wrapper {
+    padding: 0;
+  }
+
+  .header-logo {
+    padding: 16px 0 17px;
+  }
+
   .btn-nav {
     display: none;
   }
@@ -12,5 +20,9 @@
 
   .nav-list {
     position: static;
+  }
+
+  .main-item {
+    margin-top: 131px;
   }
 }

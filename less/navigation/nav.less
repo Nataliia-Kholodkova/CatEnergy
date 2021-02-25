@@ -48,7 +48,8 @@
 .nav-link {
   .reset();
   font-family: @titleFont;
-  .setFont(@fontSize: 20px, @fontWeight: 500, @lineHeight: 20px, @textTransform: uppercase, @color: @titleColor);
+  .setFontSize(20px, 28px);
+  .setFontView(@fontWeight: 500, @textTransform: uppercase, @color: @titleColor);
   text-align: center;
   transition: 0.3s linear;
 
@@ -234,9 +235,12 @@
     font-size: 20px;
     line-height: 25px;
     padding: 9px 0;
-    color: white;
 
-    &__active {
+    &__white {
+      color: white;
+    }
+
+    &__white&__active {
       border-bottom: 1px solid white;
     }
   }

@@ -1,0 +1,243 @@
+@import "../_mixins";
+@import "../_variables";
+
+.options-list, .options-item {
+  .reset();
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.options-item {
+  position: relative;
+  list-style: none;
+  background-color: @grayBackColor;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background-color: @greenBackColor;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__slim {
+    &::after {
+      background-image: url("../img/cat-slim.svg");
+    }
+  }
+
+  &__pro {
+    &::after {
+      background-image: url("../img/cat-pro.svg");
+    }
+  }
+}
+
+.option-link {
+  background-image: url("../img/right-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 24px 11px;
+  transition: 0.3s linear;
+
+  &:hover, &:active, &:focus {
+    background-image: url("../img/right-arrow-long.svg");
+    background-size: 33px 11px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .section-options {
+    margin-bottom: 17px;
+  }
+
+  .options-list {
+    flex-direction: column;
+  }
+
+  .options-item {
+    margin-bottom: 20px;
+    padding: 31px 20px 0;
+
+    &::before {
+      top: 25px;
+      left: 22px;
+      width: 50px;
+      height: 50px;
+    }
+
+    &__slim {
+      &::after {
+        top: 23px;
+        left: 30px;
+        width: 35px;
+        height: 49px;
+        background-size: 35px 49px;
+      }
+
+    }
+
+    &__pro {
+      margin-bottom: 0;
+
+      &::after {
+        top: 36px;
+        left: 13px;
+        width: 67px;
+        height: 28px;
+        background-size: 67px 28px;
+      }
+    }
+  }
+
+  .option-title {
+    padding-left: 71px;
+    margin-bottom: 30px;
+  }
+
+  .option-text {
+    padding-bottom: 22px;
+    border-bottom: 1px solid @grayBorderColor;
+  }
+
+  .option-link {
+    .setFontSize(16px, 16px);
+    padding: 20px 0 21px;
+    background-position: 96px center;
+    background-size: 24px 11px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .section-options {
+    margin-bottom: 47px;
+  }
+
+  .options-item {
+    margin-bottom: 32px;
+    padding: 77px 273px 26px 52px;
+
+    &::before {
+      top: 93px;
+      right: 61px;
+      width: 200px;
+      height: 200px;
+    }
+
+    &__slim {
+      &::after {
+        top: 81px;
+        right: 92px;
+        width: 140px;
+        height: 194px;
+        background-size: 140px 194px;
+      }
+    }
+
+    &__pro {
+      margin-bottom: 0;
+      padding-right: 313px;
+
+      &::after {
+        top: 135px;
+        right: 28px;
+        width: 268px;
+        height: 112px;
+        background-size: 268px 112px;
+      }
+
+      .option-link {
+        background-position: 124px center;
+      }
+    }
+  }
+
+  .option-title {
+    margin-bottom: 24px;
+  }
+
+  .option-text {
+    padding-bottom: 22px;
+  }
+
+  .option-link {
+    padding: 34px 0 35px;
+    background-position: 132px center;
+  }
+}
+
+@media screen and (min-width: 1300px){
+  .section-options {
+    margin-bottom: 76px;
+  }
+
+  .options-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .options-item {
+    width: 570px;
+    margin-bottom: 0;
+    padding: 77px 53px 49px;
+
+    &::before {
+      top: 47px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
+
+    &__slim {
+      &::after {
+        top: 42px;
+        left: 67px;
+        width: 70px;
+        height: 97px;
+        background-size: 70px 97px;
+      }
+    }
+
+    &__pro {
+      margin-bottom: 0;
+
+      &::after {
+        top: 70px;
+        left: 35px;
+        width: 134px;
+        height: 56px;
+        background-size: 134px 56px;
+      }
+    }
+  }
+
+  .option-title {
+    text-align: center;
+    margin-left: 18px;
+    margin-bottom: 73px;
+  }
+
+  .options-item__pro {
+    .option-title {
+      margin-left: 62px;
+    }
+  }
+
+  .option-link {
+    padding: 10px 0 10px;
+  }
+}

@@ -10,19 +10,33 @@
   background: none;
   display: block;
   box-sizing: border-box;
+  border: none;
 }
 
-.setFont(@fontSize: inherit, @fontWeight: inherit, @lineHeight: inherit, @textTransform: none, @color: @mainFontColor) {
-  font-size: @fontSize;
+.setFontView(@fontWeight: inherit, @textTransform: none, @color: @mainFontColor) {
   font-weight: @fontWeight;
-  line-height: @lineHeight;
   color: @color;
   text-transform: @textTransform;
+}
+
+.setFontSize(@fontSize: inherit, @lineHeight: inherit) {
+  font-size: @fontSize;
+  line-height: @lineHeight;
 }
 
 .setGreenButton() {
   background-color: @greenBackColor;
   color: white;
+  font-family: @titleFont;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+
+.setGrayButton() {
+  background-color: @grayBackColor;
+  color: @mainFontColor;
   font-family: @titleFont;
   font-weight: 400;
   text-transform: uppercase;

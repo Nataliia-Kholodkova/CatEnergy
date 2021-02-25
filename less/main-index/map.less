@@ -1,0 +1,135 @@
+@import "../_mixins";
+@import "../_variables";
+
+.contacts-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  .text-mark {
+    text-align: left;
+  }
+}
+
+.contacts-white {
+  background-color: white;
+}
+
+.contacts-gray {
+  background-color: @grayBackColor;
+  margin-bottom: 0;
+
+  .contacts-wrapper {
+    margin-bottom: 0;
+  }
+}
+
+.text-address {
+  font-style: normal;
+  line-height: 20px;
+}
+
+.map {
+  position: relative;
+  width: 100%;
+}
+
+.map-frame {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .contacts {
+    margin-bottom: 24px;
+
+    .text-mark {
+      width: 50%;
+    }
+  }
+
+  .contacts-wrapper {
+    padding: 0 19px;
+  }
+
+  .contacts-gray {
+    padding: 28px 0;
+  }
+
+  .text-address {
+    width: 50%;
+    font-size: 14px;
+  }
+
+  .map, .map-frame {
+    height: 362px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-wrapper {
+    padding: 0 41px;
+      margin-bottom: 59px;
+
+    .text-mark {
+      width: 35%;
+      margin-left: 0;
+      margin-right: auto;
+      line-height: 27px;
+    }
+  }
+
+  .contacts-gray {
+    padding: 62px 0;
+  }
+
+  .text-address {
+    width: 33%;
+    text-align: right;
+  }
+
+  .city {
+    display: block;
+    margin-top: 21px;
+  }
+
+  .map, .map-frame {
+    height: 396px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .contacts {
+    position: relative;
+  }
+
+    .contacts-wrapper {
+      padding: 63px 90px 0 76px;
+      margin: 0;
+      position: absolute;
+      top: 96px;
+      left: 110px;
+      width: 570px;
+      height: 201px;
+      background-color: #fff;
+      z-index: 1;
+
+    .text-mark {
+      width: 40%;
+      margin-right: auto;
+      margin-top: 0;
+      white-space: normal;
+    }
+  }
+
+    .contacts-gray {
+      padding: 0;
+    }
+
+  .text-address {
+    width: 38.5%;
+    text-align: left;
+  }
+
+  .map, .map-frame {
+    height: 401px;
+  }
+}

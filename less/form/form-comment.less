@@ -1,0 +1,59 @@
+@import "../_mixins";
+@import "../_variables";
+
+.textarea {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px){
+  .form-comment__wrapper {
+    margin-bottom: 29px;
+  }
+
+  .form-title__comment::after {
+    margin-top: 4px;
+  }
+
+  .textarea {
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form-comment__wrapper {
+    margin-bottom: 65px;
+  }
+
+  .form-title__comment {
+    padding-left: 0;
+    margin-bottom: 76px;
+
+    &::before {
+      margin-right: 41px;
+    }
+
+    &::after {
+      margin-left: 39px;
+      margin-top: 10px;
+    }
+  }
+
+  .field-comment {
+    padding-left: 41px;
+    padding-right: 37px;
+  }
+
+  .textarea {
+    height: 174px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .form-comment__wrapper {
+    margin-bottom: 68px;
+  }
+
+  .field-comment {
+    padding: 0;
+  }
+}
